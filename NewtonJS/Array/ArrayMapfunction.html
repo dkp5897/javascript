@@ -1,0 +1,27 @@
+<body>
+  <script>
+    var list = [10, 20, 30, 40, 50];
+    var result = list.map(function (input) {
+      return input + 5;
+    });
+    console.log("original array", list);
+    console.log("new array", result);
+  </script>
+ 
+  <script>
+    var list = [10, 23, 35, 40, 50];
+    var result = list.map(function (input) {
+      return input % 2 === 0;
+    });
+    console.log("original array", list);
+    console.log("new array", result);
+  </script>
+  <script>
+    var list=[10,23,35,40,50];
+    var result = list.map(function(input,index){
+               return input+index;
+    });
+    console.log("original array",list);
+    console.log("new array",result);
+</script>
+</body>

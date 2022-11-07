@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" onsubmit="submitFunction()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" oninvalid="alert('Please fill the name')" required/><br /><br />
+
+      <label for="number">Number:</label>
+      <input type="email" id="" oninvalid="alert('Please fill correct mail')" /><br /><br />
+
+      <label for="">Country</label>
+      <select name="country" id="" onchange="changefunction(this)">
+        <option value="India">India</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="bangladesh">Bangladesh</option>
+      </select>
+      
+      <input type="submit">
+    </form>
+
+    <div class="container" style="border: 1px solid blue;"></div>
+  </body>
+  <script>
+    function submitFunction() {
+      let x = document.getElementById('name').value
+      document.querySelector(".container").innerHTML = x;
+    alert(`Hello ${x}`);
+    }
+  </script>
+</html>

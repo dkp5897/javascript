@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        .container{
+            background-color: antiquewhite;
+            width: 75%;
+            height:auto;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            background-color: red;
+            width: 88px;
+            height: 35px;
+            margin: 5px;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+    <body>
+        <div class="container">
+           
+        </div>
+    </body>
+    <script>
+        // create 10 box
+        const container =document.querySelector('.container');
+        for(let i=0;i<100;i++){
+            let div= document.createElement('div');
+            div.setAttribute('class','box');
+            div.innerHTML=i;
+            container.appendChild(div);
+        }
+    </script>
+</html>

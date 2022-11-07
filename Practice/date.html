@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="date1">
+    <input type="date" id="date2">
+    <button id="btn" onclick="calculate()">calulate</button>
+    <p id="result"></p>
+</body>
+<script>
+    function calculate(){
+        let d1 = document.getElementById("date1").value
+    let d2 = document.getElementById("date2").value
+
+    let date1= new Date(d1)
+    let date2= new Date(d2)
+
+    const time = Math.abs(date1-date2)
+    console.log(time)
+    const numberofDays = Math.ceil(time/(24*60*60*1000))
+
+    document.getElementById('result').innerHTML=numberofDays
+    }
+
+</script>
+</html>

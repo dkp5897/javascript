@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        .tile{
+            width: 14%;
+            height: 150px;
+            float: left;
+            border-radius: 10px;
+            /* border: 2px solid; */
+        }
+    </style>
+    <body>
+        <div id="container">
+            
+        </div>
+
+    </body>
+    <script>
+        // generate random number
+        function random(number){
+            return Math.floor(Math.random()*number)
+        }
+        // generate random color
+        function colors(){
+            const randColor= `rgb(${random(255)},${random(255)},${random(255)})`;
+            return randColor;
+        }
+
+        // generating different boxes
+        var container = document.querySelector("#container")
+        for(let i=0;i<42;i++){
+            let div =document.createElement('div')
+                div.classList.add('tile');
+                container.appendChild(div);
+        }
+        
+        //performing Event delegation
+        container.addEventListener('click',(event) =>{
+            event.target.style.backgroundColor= colors();
+        })
+    </script>
+</html>

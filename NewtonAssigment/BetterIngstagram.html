@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #div1,
+    #div2,
+    #div3,
+    #div4,
+    #div5,
+    #div6 {
+      float: left;
+      width: 85px;
+      height: 85px;
+      margin: 20px;
+      padding: 0px;
+      border: 1px solid black;
+    }
+
+    img {
+      height: 80px;
+      width: 80px;
+    }
+
+    div {
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+  <body>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  </body>
+  <script>
+    const imgSrc = [
+      "https://gamedata.britishcouncil.org/sites/default/files/attachment/number-8_1.jpg",
+      "https://cdn.jjkeller.com/wcsstore/CVCatalogAssetStore/images/product/1000x1000/2297.jpg",
+      "https://www.wtbtraffic.com/pub/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/3/5/352snw-_2964_.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMbGV1ULD1u_9RUWErypD7livA2msWnb5Xw&usqp=CAU",
+      "https://images-na.ssl-images-amazon.com/images/I/31JniuDxNBL.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/31JNiTM00pL.jpg",
+    ];
+
+    function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  let data1 = ev.dataTransfer.getData("text");
+  
+  let src = event.target.src;
+  let id = event.target.id;
+  let img1 = document.getElementById(data1);
+  event.target.id = img1.id;
+  event.target.src = img1.src;
+  img1.id = id;
+  img1.src = src;
+}
+
+    function loadImgs() {
+      for (let i = 1; i <= 6; i++) {
+        const curDivid = "div" + i;
+        const curImgid = "drag" + i;
+        const currDiv = document.getElementById(curDivid);
+        // currDiv.innerHTML = curdivid;
+        // console.log(currDiv)
+
+        const newImg = document.createElement("img");
+        newImg.setAttribute("src", imgSrc[i - 1]);
+        newImg.setAttribute("id", curImgid);
+        newImg.setAttribute("draggable", "true");
+        newImg.setAttribute("ondragstart", "drag(event)");
+
+        currDiv.appendChild(newImg);
+      }
+    }
+
+    loadImgs()
+  </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="name">Name:</label>
+      <input type="text" id="name" oninput="inputfunction(this)" /><br /><br />
+      <label for="number">Number:</label>
+      <input type="number" id="" oninput="inputfunction(this)" /><br /><br />
+      <label for="">Country</label>
+      <select name="country" id="">
+        <option value="India">India</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="bangladesh">Bangladesh</option>
+      </select>
+      <br>
+    </form>
+
+    <div class="container" style="border: 1px solid blue;"></div>
+  </body>
+  <script>
+    function inputfunction(element) {
+      let x = element.value;
+      document.querySelector(".container").innerHTML = x;
+    }
+  </script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 25%;
+        height: 200px;
+        background-color: aquamarine;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        left: 0;right: 0;bottom: 0;top: 0;
+        border-radius: 20px;
+      }
+      .counter {
+        width: 100px;
+        height: 70px;
+        margin: 20px;
+        background-color: antiquewhite;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        border-radius: 15px;
+      }
+      button {
+        width: 75px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: aqua;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 id="heading"></h1>
+      <div class="counter" id="count">0</div>
+      <div class="btn">
+        <button id="increment">Start</button>
+        <button id="decrement">Stop</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let display = document.getElementById('count');
+    let Start = document.getElementById("increment");
+    let Stop = document.getElementById("decrement");
+    
+    let number = 0;
+    let toStop;
+
+    Start.addEventListener('click', timeInterval)
+    
+    function timeInterval(){
+       toStop= setInterval(()=>{
+            number++;
+            display.innerHTML=`${number}`;
+        },1000)
+    }
+    
+    // to stop we have pass a reference of setOnterval
+    Stop.addEventListener('click', () =>{
+        clearInterval(toStop);
+    })
+  </script>
+</html>

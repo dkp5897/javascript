@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+      .container {
+        display: flex;
+        background-color: antiquewhite;
+        width: 300px;
+        height: 400px;
+        margin: auto;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .screen {
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
+      #input {
+        width: 250px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .number input {
+        margin: 5px;
+        width: 50px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: 600;
+        border-radius: 10px;
+        background-color: black;
+        color: antiquewhite;
+      }
+      #clr {
+        width: 200px;
+        margin-left: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <form name="cal">
+          <input type="text" id="input" name="answer" />
+        </form>
+      </div>
+      <div class="number">
+        <form>
+          <input type="button" id="block1" value="1" onclick="cal.answer.value+='1' " />
+          <input type="button" id="block2" value="2" onclick="cal.answer.value+='2' " />
+          <input type="button" id="block3" value="3" onclick="cal.answer.value+='3' " />
+          <input type="button" id="plus"   value="+" onclick="cal.answer.value+='+' " />
+          <br /><br />
+          <input type="button" id="block4" value="4" onclick="cal.answer.value+='4' " />
+          <input type="button" id="block5" value="5" onclick="cal.answer.value+='5' " />
+          <input type="button" id="block6" value="6" onclick="cal.answer.value+='6' " />
+          <input type="button" id="minus"  value="-" onclick="cal.answer.value+='-' " />
+          <br /><br />
+          <input type="button" id="block7" value="7" onclick="cal.answer.value+='7' " />
+          <input type="button" id="block8" value="8" onclick="cal.answer.value+='8' " />
+          <input type="button" id="block9" value="9" onclick="cal.answer.value+='9' " />
+          <input type="button" id="multiply" value="*" onclick="cal.answer.value+='*' " />
+          <br /><br />
+          <input type="button" id="block0" value="0" onclick="cal.answer.value+='0'" />
+          <input type="button" id="dot"    value="." onclick="cal.answer.value+='.' " />
+          <input type="button" id="divide" value="/" onclick="cal.answer.value+='/' " />
+          <input type="button" id="equal"  value="=" onclick="cal.answer.value = eval(cal.answer.value) " />
+          <br /><br />
+          <input type="button" value="Clear All" id="clr" onclick="cal.answer.value=' ' " />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

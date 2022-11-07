@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      thead tr th {
+        background-color: #00008b;
+        color: #ffffff;
+      }
+      tbody > tr > :nth-child(1) {
+        background-color: #f2f2f2;
+      }
+      tbody > tr > :nth-child(8) {
+        background-color: #d1d1d1;
+      }
+      tbody,
+      td {
+        border: 1px solid #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <h1 class="title">IPL Season 2022 Points</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Team</th>
+            <th>Matches</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>Tied</th>
+            <th>NRR</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <script>
+        function fetchData() {
+          fetch("https://my-json-server.typicode.com/FreSauce/json-ipl/data")
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              for (let x in data) {
+                const tr = document.createElement("tr");
+                tr.innerHTML += `<td>${data[x].No}</td>
+                                <td>${data[x].Team}</td>
+                                <td>${data[x].Matches}</td>
+                                <td>${data[x].Won}</td>
+                                <td>${data[x].Lost}</td>
+                                <td>${data[x].Tied}</td>
+                                <td>${data[x].NRR}</td>
+                                <td>${data[x].Points}</td>`;
+                document.querySelector("tbody").appendChild(tr);
+              }
+            });
+        }
+
+        fetchData();
+      </script>
+    </body>
+  </body>
+</html>

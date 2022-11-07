@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+    .container{
+            border: 2px solid;
+            margin: auto;
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+            width: 75%;
+            height: 300px;
+        }
+        #box{
+            margin: auto;
+            margin-top: 10px;
+            width: 250px;
+            height: 200px;
+            border: 2px solid;
+        }
+        .btn-box{
+            margin-top: 40px;
+            margin-left: 100px;
+        }
+</style>
+<body>
+    <div class="container" >
+        <div id="box">
+            
+        </div>
+        <div class="btn-box">
+            <button id="mouseover" onclick="removehandler(event)">Remove mouseOver</button>
+            <button id="mouseout" onclick="removehandler(event)">Remove mouseOut</button>
+            <button id="mousedown" onclick="removehandler(event)">Remove mouseDown</button>
+        </div>
+    </div>
+</body>
+<script>
+    let box =document.getElementById('box');
+    box.addEventListener('mouseover',mouseoverhandler)
+    box.addEventListener('mouseout',mouseouthandler)
+    box.addEventListener('mousedown',mousedownhandler)
+
+    function mouseoverhandler(){
+        box.style.backgroundColor='blue';
+    }
+
+    function mouseouthandler(){
+        box.style.backgroundColor='brown';
+    }
+
+    function mousedownhandler(){
+        box.style.backgroundColor='grey';
+    }
+
+    function removehandler(event){
+        let removeEvent = event.target.id;
+        if(removeEvent=='mouseover'){
+            box.removeEventListener(removeEvent,mouseoverhandler);
+        }
+        else if(removeEvent=='mousedown'){
+            box.removeEventListener(removeEvent,mousedownhandler);
+        }
+        else{
+            box.removeEventListener(removeEvent,mouseouthandler);
+        }
+        box.style.backgroundColor='white'
+    }
+</script>
+</html>

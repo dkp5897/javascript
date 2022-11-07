@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        .container{
+            background-color: antiquewhite;
+            width: 75%;
+            height:auto;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            /* background-color: red; */
+            width: 92px;
+            height: 35px;
+            margin: 5px;
+            text-align: center;
+            font-size: 25px;
+        }
+        .odd{
+            background-color: rgb(61, 198, 152);
+        }
+        .even{
+            background-color: brown;
+        }
+    </style>
+    <body>
+        <div class="container">
+           
+        </div>
+    </body>
+    <script>
+        // create 10 box
+        const container =document.querySelector('.container');
+        for(let i=0;i<100;i++){
+            let div= document.createElement('div');
+            div.innerHTML=i;
+            // box.classList.add('bg-blue', 'text-white');  for adding more class
+            // box.classList.remove('first-class', 'second-class'); for removing classes
+            div.setAttribute('class','box');
+            if(i%2==0){
+                div.classList.add('even');
+                div.style.color='white';
+            }
+            else{
+                div.classList.add('odd');
+            }
+            container.appendChild(div);
+        }
+    </script>
+</html>

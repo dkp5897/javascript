@@ -1,0 +1,30 @@
+<body>
+  <script>
+    var amount = 500;
+    var coupon = false;
+    var offer = 0;
+    if (coupon && amount >= 500) {
+      offer = 50;
+    } else {
+      offer = 25;
+    }
+    var finalAmount = amount - offer;
+    console.log(finalAmount);
+  </script>
+  
+  <script>
+    var amount = 500;
+    var coupon = true;
+    var offer = 0;
+    if (coupon && amount >= 500) {
+      offer += 50;
+    } else {
+      offer += 25;
+    }
+    if (amount >= 1000) {
+      offer += 100;
+    }
+    var finalAmount = amount - offer;
+    console.log(finalAmount);
+  </script>
+</body>

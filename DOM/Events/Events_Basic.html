@@ -1,0 +1,61 @@
+<!-- threre are four way to write events in javascript -->
+<!-- 1.  by using alert (inline events)
+2.  by calling a function   
+3.  by using inline events (HTML onclicl()=>"" propety and element.onclick)
+4.  using event listeners (addEventListener) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    #btn{
+        width: 150px;
+        height: 50px;
+        background-color: aquamarine;
+        border-radius: 10px;
+        border: 2px solid;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 class="heading">Onclick Events</h1>
+        <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum porro consequuntur non! Ipsam vel aut nisi esse vitae error. Sit rem doloribus explicabo quos iusto autem, quis expedita hic illo animi repellendus laborum perspiciatis facilis, culpa porro, iure corrupti fugit vero? Maxime perferendis quam natus aspernatur aliquid culpa quaerat maiores quas tempore! Laboriosam aliquid vel expedita laborum. Necessitatibus reprehenderit facere itaque quisquam aut quibusdam error quia labore in praesentium esse odio quos iste exercitationem perferendis ratione, dolorum, explicabo libero. Quibusdam blanditiis laboriosam aspernatur? Dolores laboriosam accusantium, molestiae necessitatibus at suscipit atque eum reprehenderit nemo dicta unde cum similique facere ipsa culpa repellat fugit velit, perferendis totam nam repellendus adipisci obcaecati alias placeat. Eligendi explicabo nostrum, perspiciatis, a aperiam facere cumque accusamus eius veritatis ipsum labore deleniti esse aspernatur fugiat voluptate placeat dolorem eum quae sunt molestias qui voluptatibus veniam. Quam maxime deleniti voluptate quisquam, quos molestias eaque odit saepe quod velit maiores consectetur exercitationem dicta, inventore libero voluptatibus eius? Quis iusto tempore fugiat eligendi rerum eos ipsa, delectus, error quae unde labore. Aliquam amet repellendus, illo voluptas consequatur ipsum, est similique quibusdam ex aliquid, exercitationem nostrum debitis? Provident vel natus officiis nemo tenetur? Soluta eos saepe blanditiis minima officia.</p>
+        <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    </div>
+</body>
+<script>
+    
+        let para = document.getElementById('para');
+
+        // onclick evenet
+    function toggleHide(){
+        if(para.style.display!='none'){
+            para.style.display='none';
+        }
+        else{
+            para.style.display='block'
+        }
+    }
+
+    // mouseover events
+
+    para.addEventListener('mouseover',function run(){
+        // alert("Your mouse is on the para");
+    //    console.log(("Your mouse is on the para"));
+        para.style.backgroundColor="blue"
+    })
+
+    // mousedown events
+    para.addEventListener('mouseout',function run(){
+        console.log(("Your mouse is out of the para"));
+        para.style.backgroundColor="white"
+    })
+
+ 
+</script>
+</html>

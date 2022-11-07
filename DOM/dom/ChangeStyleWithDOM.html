@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <h3 id="heading">Welcome</h3>
+            <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi blanditiis, quasi sapiente, fugiat minus magnam corrupti voluptatibus tenetur, voluptatum quisquam veniam inventore officia praesentium molestias porro reprehenderit nemo incidunt impedit!</p>
+            <div id="list">
+                <ul>
+                    <li class="listItem">book</li>
+                    <li class="listItem">pen</li>
+                    <li class="listItem">pencle</li>
+                    <li class="listItem">bag</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script>
+       // change the color of list
+       let lists = Array.from(document.querySelectorAll('#list li'));
+    //    lists.style.color='red';      // this will through error , we have to go for each elements
+        lists.forEach((ele) => ele.style.color='green',)
+
+       // change the tag and add bacground color in heading
+
+       let heading = document.getElementById('heading');
+       heading.innerHTML="<h1>Welcome to Javascript</h1>";
+       heading.style.background='aqua';
+       
+       // set bacground color and color of paragraph
+       let para=document.getElementById('para');
+       para.style.background='black';
+       para.style.color='white';
+    </script>
+</html>

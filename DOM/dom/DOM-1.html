@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Basic</title>
+</head>
+<body>
+    <ul>
+        <li>First Element</li>
+        <li>Second Element</li>
+        <li>Third Element</li>
+    </ul>
+
+    <script>
+        // Root Nodes
+        console.log(document.documentElement);
+        console.log(document.body);
+        console.log(document.head);
+        
+        //childrens
+
+        // console.log(document.body.childNodes)
+        // console.log(document.body.children) // this is not an array
+        
+        // for(nodes of document.body.children){
+            //     console.log(nodes)
+            // }
+            
+            // console.log(document.body.firstChild);
+            // console.log(document.body.lastChild);
+            
+            // console.log(document.body.firstElementChild);
+        // console.log(document.body.lastElementChild);
+        
+        // const childrenOfBody= Array.from(document.body.children);
+        // console.log(childrenOfBody);
+        
+        
+        // siblings
+        const ulTag= document.body.children[0];
+        console.log(ulTag);
+        const firstLi= ulTag.children[0];
+        console.log(firstLi);
+        
+
+    </script>
+</body>
+</html>

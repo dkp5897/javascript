@@ -1,0 +1,40 @@
+<html>
+  <body></body>
+  <script>
+    class employee {
+      constructor(name, age, salary) {
+        this.empname = name;
+        this.empage = age;
+        this.empsalary = salary;
+        console.log("this is manager class");
+      }
+      info() {
+        document.write(`<h1>Employee Class</h1>
+                        Name: ${this.empname} <br>
+                        age:  ${this.empage}  <br>
+                        Salary:${this.empsalary}`);
+      }
+    }
+
+    class manager extends employee {
+      info() {
+        super.info()
+        let ta = 1000;
+        let pa = 500;
+        let totalSalary = this.empsalary + pa + ta;
+        document.write(`<h1>Manager Class</h1>
+                        Name: ${this.empname} <br>
+                        age:  ${this.empage}  <br>
+                        Salary:${totalSalary}`);
+      }
+    }
+
+    class text extends manager{
+
+    }
+
+    let a = new text("Deepak Kumar", 25, 50000);
+    a.info()
+    
+  </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: auto;
+            height: auto;
+        }
+        .box{
+            width: 100px;
+            height: 50px;
+            margin: 4px;
+            text-align: center;
+        }
+</style>
+<body>
+    <div class="container" id="main">
+
+    </div>
+</body>
+<script>
+    function display(){
+        var list =["india","usa","china","russia","france","germany","north korea","south korea","dubai","australia"];
+        var colorList =["orange","blue","green","red","yellow","violet","green","brown","grey","tomato"];
+        for(let i=0;i<list.length;i++){
+            var parent=document.createElement('div');
+            var child=document.createTextNode(list[i]);
+            parent.appendChild(child);
+
+            parent.classList.add('box');
+            parent.style.backgroundColor=colorList[i];
+            var main=document.getElementById('main');
+            main.appendChild(parent);
+        }
+    }
+    display();
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuerySelector</title>
+    <!-- <style>
+        div{
+            back
+        }
+    </style> -->
+  </head>
+  <body>
+    <h3 id="heading">
+      The querySelector() method returns the first element that matches a CSS
+      selector. To return all matches (not only the first), use the
+      querySelectorAll() instead.
+    </h3>
+    <div class="container">
+        <h1 class="child" id="heading">Welcome to DOM manupulation</h1>
+        <div class=" red good" id="myfirst">child-1</div>
+        <div class="child" id="second">child-2</div>
+        <div class="child">child-3</div>
+        <div class="child">child-4</div>
+        <form action="none.html" method="post">
+            Search Here<input type="text">
+            <br>
+            <input type="submit">
+        </form>
+        <a href="//dkCode.com">Open DK Code</a>
+        
+    </div>
+    <div class="foot">Foot</div>
+  </body>
+  <script>
+    var element = document.querySelector("#heading");
+    console.log(element);
+    element.style.color='red'
+    // element.innerHTML='This is me'
+
+    var e2=document.querySelector('.container');
+    console.log(e2)
+
+    //Get the first <div> element in with class="child":
+    var e3=document.querySelector('div.child');
+    console.log(e3);
+
+    //Select the first <h1> element with the parent is a <div> element.
+    var e4=document.querySelector("div>h1") 
+    console.log(e4) ;
+
+    //Select the first <h1> element with the parent is a <div> element.
+    var e5=document.querySelector("div>div") 
+    console.log(e5);   
+  </script>
+</html>

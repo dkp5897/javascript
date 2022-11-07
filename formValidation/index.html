@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+</head>
+<body>
+    <form action=""></form>
+    <label>Name: </label>
+    <input type="text" id="name"><br>
+    Last Name<input type="text" id="lname"><br>
+    <button type="submit" onclick="myfunction()">submit</button>
+</body>
+<script>
+    function myfunction(){
+        let x1=document.getElementById('name').value
+        let x2 = document.getElementById('lname').value;
+        alert(`${x1} ${x2}`)
+    }
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="name" onfocus="focusfunction(this)" onblur="blurfunction(this)"><br><br>
+    <label for="number">Number:</label>
+    <input type="number" id=""  onfocus="focusfunction(this)" onblur="blurfunction(this)"><br><br>
+    <label for="">Country</label>
+    <select name="country" id=""  onfocus="focusfunction(this)" onblur="blurfunction(this)">
+        <option value="India">India</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="bangladesh">Bangladesh</option>
+    </select>
+   
+</body>
+<script>
+    // for a particular Element
+    // function focusfunction(){
+    //     document.getElementById('name').style.backgroundColor='yellow'
+    // }
+
+    // for multiple Element
+    function focusfunction(element){
+        element.style.backgroundColor='yellow'
+    }
+
+    // to remove we use blur
+    function blurfunction(element){
+        element.style.backgroundColor='';
+    }
+</script>
+</html>

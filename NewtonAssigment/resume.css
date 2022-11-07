@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* .left-section{grid-area: left-section;}
+.right-section{grid-area: right-section;} */
+
+.main-content{
+    display: grid;
+    /* grid-template-areas: 'left-section right-section right-section'; */
+    min-height: 1000px;
+    width: 90%;
+    margin: 20px auto;
+    grid-template-columns: 300px 700px;
+    /* grid-template-rows: ; */
+}
+
+.left-section{
+    grid-column: span 1;
+    background-color: rgb(189, 245, 245);
+    /* height: 500px; */
+}
+.left-content{
+    padding: 1rem;
+}
+img{
+    display: block;
+    align-items: center;
+    margin:auto;
+    width: 60%;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02px;
+    padding: 0.8rem;
+}
+.designation{
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+.description{
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+}
+/* this */
+.social-media ul{
+    display: flex; 
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+/* this */
+.personal-details li{
+    padding: 5px;
+    padding-left:14px ;
+}
+.skills-tittle{
+    font-size: 0.75rem;
+    text-align: center ;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; */
+}
+.skill-name{
+    font-size: 0.65rem;
+    /* font-weight: 0.65rem; */
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+.progress-bar{
+    border: 1px white solid;
+    height: 4px;
+}
+.right-section{
+    grid-column: span 1/span 2;
+    background-color: rgb(240, 243, 228);
+    /* height: 500px; */
+}
+.right-main-content{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.right-title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+}
+section{
+    display: block;
+}
+body{
+    display: block;
+}
+
+@media  (max-width:673px) {
+    .main-content{
+        grid-template-columns:repeat(1,1fr);
+    }
+}

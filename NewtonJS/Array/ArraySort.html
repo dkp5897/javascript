@@ -1,0 +1,34 @@
+<body>
+  <script>
+    var list = [56, 4, 3, 66, 88, 1000, 33];
+    console.log("original array", list);
+    var result = list.sort(function (a, b) {
+      return a - b;
+    });
+    console.log("final result", result);
+  </script>
+
+<!-- //Descending sort: -->
+  <script>
+    var list = [56, 4, 3, 66, 88, 1000, 33];
+    console.log("original array", list);
+    var result = list.sort(function (a, b) {
+      return b - a;
+    });
+    console.log("final result", result);
+  </script>
+  <script>
+    var list =["c","d","b","e","a"];
+    console.log("original array",list);
+    var result = list.sort();
+    console.log("final result",result);
+</script>
+
+<script>
+    var list =["c","d","b","e","a"];
+    console.log("original array",list);
+    var result = list.sort();
+    result = result.reverse();
+    console.log("final result",result);
+</script>
+</body>

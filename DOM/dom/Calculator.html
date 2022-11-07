@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-box">
+        <div class="display-vlaue">
+            <button id="inputOne" class="display-number"></button>
+            <button id="symbol" class="display-number"></button>
+            <button id="inputTwo" class="display-number"></button>
+        </div>
+        <div class="result-value">
+            <p>Result:</p>
+            <button id="result" class="display-number"></button>
+        </div>
+      </div>
+      <div class="right-box">
+        <button id="add" onclick="onSubmitHandler(event)" class="btn">Add</button>
+        <button id="sub" onclick="onSubmitHandler(event)" class="btn">Sub</button>
+        <button id="mul" onclick="onSubmitHandler(event)" class="btn">Mul</button>
+        <button id="div" onclick="onSubmitHandler(event)" class="btn">Div</button>
+      </div>
+    </div>
+    <div class="number-plate">
+        <div class="number-btn">
+            <table class="numbering">
+                <tr >
+                    <td><button onclick="onButtonHandler(event)" id="1">1</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="2">2</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="3">3</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="onButtonHandler(event)" id="4">4</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="5">5</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="6">6</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="onButtonHandler(event)" id="7">7</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="8">8</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="9">9</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="onButtonHandler(event)" id="0">0</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="00">00</button></td>
+                    <td><button onclick="onButtonHandler(event)" id="000">000</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+  </body>
+  <script src="Calculator.js"></script>
+</html>

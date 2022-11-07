@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-box {
+  width: 400px;
+  height: 250px;
+  border: 2px solid black;
+  margin: 10px;
+  background-color: azure;
+}
+.right-box {
+  width: 200px;
+  height: 100%;
+  /* border: 1px solid black; */
+  margin: 10px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.btn {
+  display: block;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: sandybrown;
+}
+.btn:hover{
+    border-radius: 10px;
+    background-color: aqua;
+}
+.number-plate {
+  display: flex;
+  justify-content: center;
+}
+.number-btn {
+  width: 500px;
+  margin: 20px;
+}
+.numbering button {
+  width: 150px;
+  margin: 5px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+.numbering button:hover {
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+}
+
+/* display css (left box) */
+.left-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.display-vlaue {
+    display: flex;
+    width: 210px;
+    height: 70px;
+    border: 1px solid;
+    justify-content: center;
+}
+.display-vlaue button{
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+}
+/* Result display */
+.result-value{
+    display: flex;
+    justify-content: center;
+    border: 2px solid green;
+    margin: 10px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+}
+.result-value button{
+    /* width: 40px; */
+    height: 40px;
+    font-size: 25px;
+}
+.display-number{
+    margin: 16px;
+}

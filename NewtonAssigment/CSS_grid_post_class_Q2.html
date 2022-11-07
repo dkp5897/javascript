@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Subscription</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .community{grid-area: community;}
+        .card{grid-area: card;}
+        .why-us{grid-area: why-us;}
+
+        body{
+            background-color: black;
+        }
+        main{
+            border-radius: 11px;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+            'community community' 
+            'card why-us';
+            margin: 100px;
+            
+        }
+        .community{
+            background-color: rgb(255, 253, 253);
+            height: auto;
+            text-align: center;
+            padding: 20px;
+              
+        }
+        #h-first{
+            color: rgb(68, 225, 173);
+            margin: 13px;
+        }
+        #h-second{
+            color: rgb(148, 231, 120);
+            margin: 13px;
+        }
+        #para-first{
+            color: burlywood;
+            margin: 15px;
+            font-weight: 800;
+        }
+        .card{
+            background-color: rgb(15, 67, 66);
+            height: auto;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+        button{
+            background-color: green;
+            width: 170px;
+            height: 35px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .why-us{
+            background-color: rgba(85, 145, 142, 0.698);
+            height: auto;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="community">
+                <h2 id="h-first">Join our community</h2>
+                <h2 id="h-second">30-days, hassle-free monkey back gurarantee</h2>
+                <p id="para-first">Gaine access to our full library of tutorial along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+            </div>
+            <div class="why-us">
+                <h2 id="h-third">why-us</h2>
+                <br>
+                <p id="para-second">Tutorials by industry experts Peer & experts code review Coding excercise</p>
+                <p id="para-third">Access yo our GitHub repos Community forum Flashcard decks</p>
+            </div>
+            <div class="card">
+                <h2>Monthly Subscription</h2>
+                <br>
+                <span>$29 </span><span>per month</span>
+                <br>
+                <br>
+                <p>Full access for less than &1 a day</p>
+                <br>
+                <button>Sign Up</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

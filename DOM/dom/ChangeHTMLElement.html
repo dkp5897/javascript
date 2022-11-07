@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <h3 id="heading">Welcome</h3>
+            <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi blanditiis, quasi sapiente, fugiat minus magnam corrupti voluptatibus tenetur, voluptatum quisquam veniam inventore officia praesentium molestias porro reprehenderit nemo incidunt impedit!</p>
+            <div id="list">
+                <ul>
+                    <li class="listItem">book</li>
+                    <li class="listItem">pen</li>
+                    <li class="listItem">pencle</li>
+                    <li class="listItem">bag</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script>
+        // updating the text/text with tag 
+        let heading =document.getElementById('heading');
+        let para = document.getElementById('para');
+
+        heading.innerText="Welcome to DOM"
+        heading.innerHTML="<h1>Welcome to DOM</h1>"
+
+        para.innerHTML="Date: "+Date();
+
+        // para.innerHTML="<h3></h3>"
+
+        // Changing the Value of an Attribute
+        para.id="paragraph";   // updating id of p tag
+        document.getElementsById('list').id="studyList";
+        
+    </script>
+</html>

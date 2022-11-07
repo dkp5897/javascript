@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 350px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(135, 169, 169);
+        margin: auto;
+        position: absolute;
+        left: 0;
+        /* padding-left: 10px; */
+        right: 0;
+        bottom: 0;
+        top: 0;
+        font-size: 20px;
+      }
+
+      .btn button {
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 50px;
+        height: 35px;
+      }
+      .task-container {
+        padding-left: 30px;
+        padding-top: 10px;
+        font-size: 30px;
+      }
+      #pad {
+        font-size: 20px;
+        width: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <textarea name="todp" id="pad" cols="10" rows="10"></textarea>
+      <div class="btn">
+        <button id="add-task" onclick="addTask()">Add</button>
+        <button id="remove-task" onclick="removeTask()">Remove</button>
+      </div>
+      <div class="task-container">
+        <ul id="task-list"></ul>
+      </div>
+    </div>
+    <script src="TaskAddition.js"></script>
+  </body>
+</html>

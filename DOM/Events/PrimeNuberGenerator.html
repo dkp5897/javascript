@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number</title>
+    <style>
+      .header {
+        width: 50%;
+        height: 40px;
+        margin: auto;
+        /* border: 1px solid; */
+      }
+      .header input {
+        width: 250px;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .header button {
+        margin-left: 20px;
+        width: 150px;
+        height: 40px;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: aqua;
+      }
+      .container {
+        display: flex;
+        /* border: 2px solid; */
+        height: 400px;
+        margin: 20px;
+        justify-content: center;
+      }
+      .box {
+        width: 70px;
+        height: 50px;
+        background-color: black;
+        color: aliceblue;
+        margin: 10px;
+        text-align: center;
+        font-size: 40px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <input type="number" id="prime" name="primenumber" />
+      <button id="btn" onclick="generatePrime()">Generate</button>
+    </div>
+    <div class="container" id="box-container"></div>
+  </body>
+  <script>
+      function generatePrime() {
+        var display = document.getElementById("prime");
+        var number = display.value;
+        number = parseInt(number) ? parseInt(number) : false;
+        // console.log(number);
+        if (number && isPrime(number)) {
+        var container = document.getElementById("box-container");
+        let box = document.createElement("div");
+        let text = document.createTextNode(number);
+
+        box.appendChild(text);
+        box.classList.add("box");
+        container.appendChild(box);
+        display.value=""
+      } else {
+        alert("Write only prime number");
+        display.value=""
+      }
+    }
+
+    function isPrime(number) {
+      if (number < 2) return false;
+      else if (number != 2 && number % 2 == 0) return false;
+      for (let i = 3; i < number; i++) {
+        if (number % i == 0) return false;
+      }
+
+      return true;
+    }
+
+    console.log(isPrime(72));
+  </script>
+</html>

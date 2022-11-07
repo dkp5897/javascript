@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p id="red">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quo cupiditate natus officia enim culpa quos, consequatur assumenda sunt dolore obcaecati facilis ad fugiat perspiciatis, cumque, eveniet porro tempore quasi.</p>
+        <p id="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ut, quas magnam soluta vitae provident commodi, velit deserunt ipsa aliquam blanditiis tenetur animi facilis dolores similique quos, doloremque recusandae nulla.</p>
+        <p id="green">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quo quas nobis numquam nemo? At, ex dolores reiciendis, similique saepe, dolorum hic id laboriosam necessitatibus eveniet quod nemo rem optio.
+        </p>
+    </div>
+</body>
+<script>
+    const red = document.getElementById("red")
+    const green = document.getElementById("green")
+    const blue = document.getElementById("blue")
+
+    red,addEventListener("click",(event)=>{
+        red.style.backgroundColor = event.target.id;
+    })
+
+    green.addEventListener("dblclick",(event)=>{
+        green.style.backgroundColor=event.target.id
+    })
+
+    blue.addEventListener("mouseover",(event)=>{
+        blue.style.backgroundColor = event.target.id
+    })
+
+    
+</script>
+</html>

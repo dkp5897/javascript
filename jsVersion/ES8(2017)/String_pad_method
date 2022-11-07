@@ -1,0 +1,7 @@
+
+
+let Name = "Deepak".padStart(10) // it will increase the length and add space from starting position
+console.log(Name);
+
+let Name2="Pradeep".padEnd(10); // it will increase the length and add space from ending position
+console.log(Name2);

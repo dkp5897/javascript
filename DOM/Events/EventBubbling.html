@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .box-1{
+            margin: auto;
+            width: 75%;
+            height: 75%;
+            border: 4px solid blue;
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+        }
+        .box-2{
+            margin: auto;
+            width: 50%;
+            height: 50%;
+            border: 3px solid red;
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+        }
+        .box-3{
+            margin: auto;
+            width: 30%;
+            height: 30%;
+            border: 2px solid green;
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1" onclick="boxOnehandler(event)">box-1
+        <div class="box-2" onclick="boxTwohandler(event)">box-2
+            <div class="box-3" onclick="boxThreehandler(event)">box-3</div>
+        </div>
+    </div>
+</body>
+<script>
+    // to avoid event bubbling use event.
+    function boxOnehandler(event){
+        // event.stopPropagation();
+        alert("box-1 was clicked");
+    }
+    function boxTwohandler(event){
+        // event.stopPropagation();
+        alert("box-2 was clicked");
+    }
+    function boxThreehandler(event){
+        // event.stopPropagation();
+        alert("box-3 was clicked");
+    }
+</script>
+</html>

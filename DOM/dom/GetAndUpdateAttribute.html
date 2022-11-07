@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <h3 id="heading">Welcome</h3>
+            <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi blanditiis, quasi sapiente, fugiat minus magnam corrupti voluptatibus tenetur, voluptatum quisquam veniam inventore officia praesentium molestias porro reprehenderit nemo incidunt impedit!</p>
+            <div id="list">
+                <ul>
+                    <li class="listItem">book</li>
+                    <li class="listItem">pen</li>
+                    <li class="listItem">pencle</li>
+                    <li class="listItem">bag</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script>
+      // add class attribute in h3 with name: highlight
+       const head = document.getElementById('heading');
+       head.setAttribute('class','highlight');
+       console.log(head.getAttribute('class')); // highlight
+
+      //  update the id with name head
+
+      head.setAttribute('id','head');
+      console.log(head.getAttribute('id'));     // head
+
+      // add a class in list and change it's color by using this clss
+      const list= document.getElementById('list');
+      list.setAttribute('class','list-container');
+      console.log(list.getAttribute('class'));
+
+       let elements= Array.from(document.querySelectorAll('.list-container li'));
+       elements.forEach((ele)=>{
+        return ele.style.color='blue'
+       })
+    
+    </script>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+       <img id="demo">
+       <div id="list"></div>
+    </body>
+    <script>
+        var list = document.getElementById("demo");
+        console.log(list);
+        if(list){
+        list.src = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*';
+        //dynamically we can add the content;
+        }
+        var content = document.getElementById("list");
+        content.innerHTML = "image";
+    </script>
+</html>

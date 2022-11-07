@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change</title>
+    <style>
+        #container{
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            position: absolute;
+            left: 0;right: 0;bottom: 0;top: 0;
+            border: 2px solid;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>put the mouse on the box</h1>
+    </div>
+</body>
+<script>
+    
+    let box = document.getElementById('container')
+    function random(number){
+        return Math.floor(Math.random()*(number+1));
+    }
+
+    // every time mouse goto box, color will be change
+    box.addEventListener('mouseover',() =>{
+        const randcolor = `rgb(${random(255)}, ${random(255)}, ${random(255)}) `;
+        box.style.backgroundColor=randcolor;
+    })
+     // every time mouse come out of box, color will be change
+    box.addEventListener('mouseout',() =>{
+        const randcolor = `rgb(${random(255)}, ${random(255)}, ${random(255)}) `;
+        box.style.backgroundColor=randcolor;
+    })
+
+  
+</script>
+</html>

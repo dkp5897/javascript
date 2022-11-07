@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Event</title>
+    <style>
+        body{
+            background-color:aquamarine ;
+        }
+        .container{
+            margin: auto;
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+            width: 800px;
+            height: 600px;
+            border: 2px solid;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .container input{
+            margin-top: 30px;
+            width: 300px;
+            height: 50px;
+            border-radius: 20px;
+            /* color: aliceblue; */
+            border: none;
+            
+        }
+        .container p{
+            font-size: 40px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Testing of KeyEvents</h1>
+        <input type="text" id="text" onkeypress="kePress(event)">
+        <p id="para"></p>
+    </div>
+      
+</body>
+<script>
+    function kePress(event) {
+        
+        document.getElementById('para').innerHTML=`You press ${event.key} `
+        document.getElementById('text').value=""
+    }
+</script>
+</html>
