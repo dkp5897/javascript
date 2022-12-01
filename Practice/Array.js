@@ -2,7 +2,6 @@
 // console.log(arr)
 // console.log(arr.at(2))
 
-
 // const returnLast = ()=>{
 //   return(arr.at(-1))
 // }
@@ -36,44 +35,100 @@
 
 // =============================================================
 
-const arr = [2,5,8,20,52,5,41,58,3];
-const arr2 = [20,50,8,58]
-const isBigger = (element) =>{
-  return element>10;
-}
+// const arr = [2, 5, 8];
+// const arr2 = [2, 5, 8, 58];
+// const isBigger = (element) => {
+//   return element > 10;
+// };
 
-console.log(arr.every(isBigger))
-console.log(arr.every((x)=>x>1))
+// console.log(arr.every(isBigger));
+// console.log(arr.every((x) => x > 1));
 
-const isSubset = (array1,array2)=>array2.every((element)=>array1.includes(element))
+// const isSubset = (array1, array2) =>
+//   array2.every((element) => array1.includes(element));
 
-console.log(isSubset(arr,arr2))
+// console.log(isSubset(arr, arr2));
 
-const res = arr.filter(isBigger)
-console.log(res)
+// const res = arr.filter(isBigger);
+// console.log(res);
 
-const arr3 = [
-  { name: "Pen", quantity: 2 },
-  { name: "Copy", quantity: 5 },
-  { name: "Book", quantity: 7 },
-  { name: "Box", quantity: 0 },
-];
+// const arr3 = [
+//   { name: "Pen", quantity: 2 },
+//   { name: "Copy", quantity: 5 },
+//   { name: "Book", quantity: 7 },
+//   { name: "Box", quantity: 0 },
+// ];
 
-console.log(arr3.find((item)=>item.name==="Book"))
-console.log(arr3.find((item)=>item.name==="Copy"))
+// console.log(arr3.find((item) => item.name === "Book"));
+// console.log(arr3.find((item) => item.name === "Copy"));
 
-console.log(arr.findIndex(isBigger))
+// console.log(arr.findIndex(isBigger));
 // console.log(arr.findLastIndex(isBigger))
 
 // arr.forEach(element =>{
 //   console.log(element)
 // } )
 
-console.log(arr.forEach(isBigger))
-let sum = 0
-function summ (ele){
-  sum+=ele
-  console.log(`The element is ${ele}`)
+// console.log(arr.forEach(isBigger));
+// let sum = 0;
+// function summ(ele) {
+//   sum += ele;
+//   console.log(`The element is ${ele}`);
+// }
+// arr.forEach(summ);
+// console.log(sum);
+
+// console.log(
+//   arr.filter((ele) => {
+//     return ele % 2 != 0;
+//   })
+// );
+
+// console.log(
+//   arr.map((ele) => {
+//     return ele % 2 == 0;
+//   })
+// );
+
+// console.log(arr.filter((ele) => ele * 2));
+
+// const subArray = (array1, array2) => {
+//   return array2.every((ele) => array1.includes(ele));
+// };
+// console.log(subArray(arr, arr2));
+
+// const result = arr
+//   .map((ele) => ele ** 2)
+//   .filter((ele) => ele > 15)
+//   .reduce((acc, curEle) => (acc += curEle));
+
+//   console.log(result);
+
+//   const avg = arr2.reduce((acc,curELe)=>{
+//     return acc+=curELe;
+//   })
+
+//   // console.log(first)
+
+//   let zone = [
+//     [['zone_1','zone_1'],['zone_1','zone_1']],
+//     [['zone_1','zone_1'],['zone_1','zone_1']]
+// ];
+
+// console.log(zone.reduce((acc,ele)=>{
+//   return acc.concat(ele)
+// }));
+
+var e1 = {fName:"Deepak",lName:"Kumar"}
+var e2 = {fName:"Pradeep",lName:"Kumar"}
+
+function invite(g1,g2){
+  console.log(g1+" "+this.fName+" "+this.lName+", "+g2);
 }
-arr.forEach(summ)
-console.log(sum)
+
+invite.call(e1,"Hello","How are You?");
+invite.apply(e2,['Hello','How are You?'])
+
+
+var bind1 = invite.bind(e1)
+bind1("Hello","How are You?")
