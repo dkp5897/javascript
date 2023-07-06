@@ -11,9 +11,9 @@
 // console.log(arr.at(-1))
 // console.log(arr.slice(0,-1))
 
-// const arr2 = [10,2,0,9,[5,3,5],7]
-// const arr3 = ['dfdsf','adfsdf','fdsfds']
-// const merge = arr.concat(arr2,arr3)
+// const arr2 = [10,2,0,9,[5,3,5],7];
+// const arr3 = ['dfdsf','adfsdf','fdsfds'];
+// const merge = arr.concat(arr2,arr3);
 
 // console.log(merge)
 
@@ -25,9 +25,9 @@
 // let res = arr.entries()
 // console.log(res)
 
-// // for(let element of res){
-// //   console.log(element)
-// // }
+// for(let element of res){
+//   console.log(element)
+// }
 
 // for(let [index,ele] of res){
 //   console.log(index,ele)
@@ -40,6 +40,17 @@
 // const isBigger = (element) => {
 //   return element > 10;
 // };
+
+// const num = [];
+// let i=10
+// while(i<=100){
+//   num.push(i)
+//   i+=2;
+// }
+
+// console.log(num)
+
+// console.log(num.every((x)=>x%2==0))
 
 // console.log(arr.every(isBigger));
 // console.log(arr.every((x) => x > 1));
@@ -56,9 +67,10 @@
 //   { name: "Pen", quantity: 2 },
 //   { name: "Copy", quantity: 5 },
 //   { name: "Book", quantity: 7 },
-//   { name: "Box", quantity: 0 },
+//   { name: "Book", quantity: 2 },
 // ];
 
+// console.log(arr3.filter((ele)=>ele.name === "Book"))
 // console.log(arr3.find((item) => item.name === "Book"));
 // console.log(arr3.find((item) => item.name === "Copy"));
 
@@ -69,7 +81,7 @@
 //   console.log(element)
 // } )
 
-// console.log(arr.forEach(isBigger));
+// // console.log(arr.forEach(isBigger));
 // let sum = 0;
 // function summ(ele) {
 //   sum += ele;
@@ -119,16 +131,22 @@
 //   return acc.concat(ele)
 // }));
 
-var e1 = {fName:"Deepak",lName:"Kumar"}
-var e2 = {fName:"Pradeep",lName:"Kumar"}
+// var e1 = {fName:"Deepak",lName:"Kumar"}
+// var e2 = {fName:"Pradeep",lName:"Kumar"}
 
-function invite(g1,g2){
-  console.log(g1+" "+this.fName+" "+this.lName+", "+g2);
-}
+// function invite(g1,g2){
+//   console.log(g1+" "+this.fName+" "+this.lName+", "+g2);
+// }
 
-invite.call(e1,"Hello","How are You?");
-invite.apply(e2,['Hello','How are You?'])
+// invite.call(e1,"Hello","How are You?");
+// invite.apply(e2,['Hello','How are You?'])
 
 
-var bind1 = invite.bind(e1)
-bind1("Hello","How are You?")
+// var bind1 = invite.bind(e1)
+// bind1("Hello","How are You?")
+
+
+const arr = [10,20,3,040,5];
+const arr1 = arr.splice(2,1);
+console.log(arr);
+console.log(arr1);

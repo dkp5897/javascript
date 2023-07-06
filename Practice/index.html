@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     Name:
-    <input id="input" type="text">
-    <button onchange="changeHandler()" id="delete">delete</button>
-</body>
-<script>
-    const input = document.getElementById('input')
-    let mass = ""
-    function changeHandler(){
-        mass = input.value
-        console.log(mass)
+    <input id="input" type="text"  />
+    <button onclick="clickHandler(event)" id="add">Add</button>
+    <div class="list">
+        <ul>
+
+        </ul>
+    </div>
+  </body>
+  <script>
+    const clickHandler = (event) =>{
+        event.preventDefault();
+        const input = document.getElementById("input");
+        // console.log(input.value);
+        const ul = document.querySelector("ul");
+        const li = document.createElement("li");
+        li.textContent = input.value;
+        ul.appendChild(li);
+        const edit= document.createElement("button")
+        const deletes= document.createElement("button")
+
+        edit.textContent = "Edit";
+        deletes.textContent = "Delete"
+        deletes.setAttribute("id",input.value)
+        edit.setAttribute("id",input.value)
+        li.appendChild(edit);
+        li.appendChild(deletes);
+
+        deletes.addEventListener("click",(e)=>{
+            // console.log("delete")
+            e.preventDefault();
+            ul.removeChild(li)
+        })
     }
-    const dlt = document.getElementById("delete")
-    dlt.addEventListener("click",()=>{
-        input.slice(0,-1)
-        console.log(input)
-    })
-</script>
+  </script>
 </html>

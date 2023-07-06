@@ -42,7 +42,7 @@
 //     .then((r)=> r.json()
 //     .then((res)=>{
 //         console.log(res)
-//     }))         
+//     }))
 // }
 
 // const getPromise = (value) =>{
@@ -106,7 +106,7 @@
 
 // let sum = 0
 // Promise.all([p1,p2,p3]).then((result)=>{
-//     for(let i in result){ 
+//     for(let i in result){
 //         sum+=result[i]
 //     }
 //     console.log(`Results: ${sum}`)
@@ -140,7 +140,6 @@
 //     console.log(error)
 // })
 
-
 // function Login(callback){
 //     setTimeout(()=>{
 //         console.log(`Page login successfully !`)
@@ -168,7 +167,6 @@
 //     },2000)
 // }
 
-
 // Login(function(){
 //     Register(function(){
 //         congrate(function(){
@@ -178,7 +176,6 @@
 // })
 
 // console.log(`Other work!`)
-
 
 // function Login(){
 //     return new Promise((resolve,reject)=>{
@@ -221,46 +218,80 @@
 //     .then(congrate)
 //     .then(product)
 
+// let stocks = {
+//     Fruits : ["strawberry", "grapes", "banana", "apple"],
+//     liquid : ["water", "ice"],
+//     holder : ["cone", "cup", "stick"],
+//     toppings : ["chocolate", "peanuts"],
+//  };
 
-let stocks = {
-    Fruits : ["strawberry", "grapes", "banana", "apple"],
-    liquid : ["water", "ice"],
-    holder : ["cone", "cup", "stick"],
-    toppings : ["chocolate", "peanuts"],
- };
+// function oredr(fruit_name,call_production){
+//     setTimeout(()=>{
+//         console.log(`Order placed!, ${stocks[fruit_name]} was selected`)
+//         call_production()
+//     },2000)
+// }
 
-function oredr(fruit_name,call_production){
-    setTimeout(()=>{
-        console.log(`Order placed!, ${stocks[fruit_name]} was selected`)
-        call_production()
-    },2000)
+// function production(){
+//     setTimeout(()=>{
+//         console.log(`production has satarted....`)
+
+//         setTimeout(()=>{
+//             console.log(`liquid ${stocks.liquid[1]} was selcted!`)
+
+//             setTimeout(()=>{
+//                 console.log("machine has started!")
+
+//                 setTimeout(()=>{
+//                     console.log(`${stocks.holder[1]} is selected as container!`)
+
+//                     setTimeout(()=>{
+//                         console.log(`${stocks.toppings[0]} is selected as topping`)
+
+//                         setTimeout(()=>{
+//                             console.log(`Your ice-creame is served, Thank You !`)
+//                         },3000)
+//                     },1000)
+//                 },2000)
+//             },1000)
+//         },2000)
+//     },1000)
+// }
+
+// oredr(2,production)
+
+// =========================================================
+
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("promise resolved!");
+    reject("Error");
+  }, 2000);
+});
+
+// p1.then((resolve)=>{
+//     console.log(resolve);
+// })
+
+// .catch((error)=>{
+//     console.log(error)
+// })
+
+function display(value) {
+  return new Promise((resolve, reject) => {
+      console.log("...fetching data")
+    setTimeout(() => {
+      if (value) {
+        resolve("promise resolved!");
+      } else {
+        reject("promise reject?");
+      }
+    }, 2000);
+  });
 }
 
-
-function production(){
-    setTimeout(()=>{
-        console.log(`production has satarted....`)
-
-        setTimeout(()=>{
-            console.log(`liquid ${stocks.liquid[1]} was selcted!`)
-
-            setTimeout(()=>{
-                console.log("machine has started!")
-
-                setTimeout(()=>{
-                    console.log(`${stocks.holder[1]} is selected as container!`)
-
-                    setTimeout(()=>{
-                        console.log(`${stocks.toppings[0]} is selected as topping`)
-
-                        setTimeout(()=>{
-                            console.log(`Your ice-creame is served, Thank You !`)
-                        },3000)
-                    },1000)
-                },2000)
-            },1000)
-        },2000)
-    },1000)
-}
-
-oredr(2,production)
+console.log(
+  display(false)
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error))
+);

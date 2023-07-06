@@ -1,9 +1,7 @@
 body {
     background-color:  #ecf0f3;
-    /* background-image: url("https://images.pexels.com/photos/370984/pexels-photo-370984.jpeg?auto=compress&cs=tinysrgb&w=1600"); */
     text-align: center;
    font-size: 17px;
-    
   }
   .container {
     width: 350px;
@@ -17,7 +15,6 @@ body {
     left: 0;
     border-radius: 15px;
     box-shadow: 12px 12px 20px #cbced1, -12px -12px 20px #ffffff;
-  
   }
   .header {
     background-color: black;
@@ -65,5 +62,5 @@ body {
     outline: none;
     padding: 0.5em;
     box-shadow:inset 8px 8px 8px #cbced1,
-               inset -8px -8px 8px#ffffff; ;
+               inset -8px -8px 8px#ffffff; 
   }

@@ -1,13 +1,25 @@
 const arr = [10,20,30,40];
 
-console.log(typeof(arr[Symbol.iterator]));
+// console.log(typeof(arr[Symbol.iterator]));
+
+// let iter = arr[Symbol.iterator]();
+// console.log(iter);
+
+// let ele = iter.next();
+
+// while(!ele.done){
+//     console.log(ele.value);
+//     ele=iter.next();
+// }
+
+console.log(typeof(arr[Symbol.iterator]))
 
 let iter = arr[Symbol.iterator]();
-console.log(iter);
+// console.log(iter.next());
 
-let ele = iter.next();
+let ele = iter.next()
 
 while(!ele.done){
-    console.log(ele.value);
-    ele=iter.next();
+    console.log(ele.value)
+    ele = iter.next()
 }

@@ -1,0 +1,16 @@
+Memoization: Memoization is a technique for speeding up applications by caching the results of expensive function calls and returning them when the same inputs are used again.
+
+Let us try to understand this by breaking the definition into small parts.
+
+Expensive Function Calls: Time and memory are the two most important resources in computer applications. As a result, an expensive function call is one that consumes large amounts of these two resources due to extensive calculation during execution.
+
+Cache: A cache is just a temporary data store that stores data in order to serve future requests for that data more quickly.
+
+Importance of Memoization: When a function is given in input, it performs the necessary computation and saves the result in a cache before returning the value. If the same input is received again in the future, it will not be necessary to repeat the process. It would simply return the cached answer from the memory. This will result in a large reduction in a code’s execution time.
+
+Memoization in Javascript: In JavaScript, the concept of memorization is based mostly on two ideas. They are as follows:
+
+1.  Closures
+2.  Higher-Order Functions
+
+Closures: Before talking about closure, let’s take a quick look at the concept of lexical scope in JavaScript. Lexical scoping defines the scope of a variable by the position of that variable declared in the source code. 
